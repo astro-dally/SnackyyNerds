@@ -76,7 +76,7 @@ import snack_25 from './Cold drinks/Limca.jpg'
 import snack_26 from './Cold drinks/monster.jpg'
 import snack_27 from './Cold drinks/Mountain dew.jpg'
 import snack_28 from './Cold drinks/Pepsi.jpg'
-import snack_29 from './Cold drinks/Sting.jpg'
+import snack_29 from './Cold drinks/sting.jpg'
 import snack_30 from './Cold drinks/Thumbs up.jpg'
 //Lays
 import snack_31 from './Lays/Lays Classic salted.jpeg'
