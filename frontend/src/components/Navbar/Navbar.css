@@ -1,0 +1,339 @@
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Makes the navbar sticky */
+    top: 0; /* Sticks it to the top */
+    left: 0; /* Aligns it to the left edge */
+    width: 100%; /* Ensures it covers the entire width of the viewport */
+    z-index: 1000; /* Ensures it appears above other content */
+    background-color: rgba(0, 0, 0, 0.9); /* Adds a translucent background for better readability */
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for better separation */
+}
+
+.navbar .logo {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    color: greenyellow;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgb(7, 253, 15);
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-menu li:hover {
+    transform: scale(1.1);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: greenyellow;
+    font-size: 18px;
+}
+
+.searchicon, .carticon {
+    width: 30px;
+    height: 40px;
+    transition: filter 0.3s ease-in-out;
+    cursor: pointer;
+}
+.searchicon:hover, .carticon:hover {
+    filter: drop-shadow(0 0 10px rgb(33, 223, 223));
+}
+
+.signinbutton {
+    background: transparent;
+    font-size: 14px;
+    color: aliceblue;
+    border: 2px solid rgb(7, 253, 15);
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(5, 250, 13, 0.6), 0 0 20px rgba(7, 253, 15, 0.5);
+}
+.signinbutton:hover {
+    background-color: rgb(7, 253, 15);
+    color: black;
+    transform: scale(1.0);
+    box-shadow: 0 0 20px rgba(4, 250, 13, 0.5), 0 0 20px rgba(7, 253, 15, 0.8);
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(7, 253, 15);
+    color: rgb(7, 253, 15);
+}
+
+.navbar li {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+.cart:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.cart .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: rgb(7, 253, 15);
+    border-radius: 50%; /* Ensures it stays a perfect circle */
+    top: -2px;
+    right: 5px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+
+@media(max-width:1050px){
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px; /* Make it larger */
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9); /* Dark background for contrast */
+    position: absolute;
+    top: 60px; /* Position below the navbar */
+    right: 0;
+    width: 100%;
+    padding: 15px;
+    gap: 10px;
+    transition: all 0.3s ease; /* Smooth transition */
+    z-index: 100; /* Ensure it appears above other content */
+}
+
+.mobile-menu li {
+    color: greenyellow;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.mobile-menu li:hover {
+    color: #fff; /* Change color on hover */
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+  
+.search-input {
+    width: 200px;
+    padding: 5px 10px;
+    border: 2px solid rgb(7, 253, 15);
+    border-radius: 50px;
+    background: transparent;
+    color: aliceblue;
+    outline: none;
+    transition: width 0.3s ease-in-out;
+}
+  
+.search-input::placeholder {
+    color: greenyellow;
+}
+  
+.search-submit {
+    background: transparent;
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+    padding-left: 10px;
+}
+/* navbar profile */
+/* Profile Dropdown */
+/* Profile Dropdown */
+.navbar-profile {
+    position: relative;
+}
+
+.navbar-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #00ff00;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-profile:hover img {
+    border-color: #beffaa;
+    transform: rotate(360deg); /* Adds a fun rotating effect */
+}
+
+.nav-profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #000; /* Solid black background */
+    padding: 10px;
+    border-radius: 12px; /* More rounded corners */
+    width: 170px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5); /* Green glowing shadow */
+    transition: all 0.5s ease-in-out;
+    transform: scale(0.9); /* Initially smaller */
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: block;
+    transform: scale(1); /* Grows when hovered */
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    color: #00ff00; /* Bright green text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-profile-dropdown li:hover {
+    background-color: #111; /* Darker hover effect */
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+.nav-profile-dropdown li img {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-profile-dropdown hr {
+    margin: 12px 0;
+    border-color: #00ff00; /* Green line */
+}
+
+.nav-profile-dropdown li:hover img {
+    transform: rotate(-45deg); /* Fun tilt effect */
+}
+
+  
+  
+
+  
+@media (max-width: 1050px) {
+    .search-input {
+        width: 150px;
+    }
+}
+  
+@media (max-width: 750px) {
+    .search-input {
+        width: 100px;
+    }
+}
+
+/* Search Results Container */
+.search-results {
+    position: absolute;
+    top: 100%; /* Position below the search input */
+    left: 0;
+    width: 100%; /* Match the width of the input */
+    background: rgba(0, 0, 0, 0.9); /* Dark background */
+    border-radius: 5px; /* Slight rounding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    z-index: 100; /* Ensure it appears above other content */
+    max-height: 300px; /* Limit height */
+    overflow-y: auto; /* Scroll if there are too many results */
+    display: none; /* Hidden by default */
+}
+
+/* Individual Result Item */
+.search-result-item {
+    padding: 10px 15px; /* Spacing for items */
+    color: greenyellow; /* Text color */
+    cursor: pointer; /* Pointer cursor for hover effect */
+    transition: background 0.3s ease-in-out; /* Smooth background transition */
+}
+
+/* Hover Effect for Result Items */
+.search-result-item:hover {
+    background: rgba(7, 253, 15, 0.3); /* Highlight on hover */
+}
+
+/* No Results Message */
+.no-results {
+    padding: 10px 15px; /* Spacing for message */
+    color: aliceblue; /* Text color */
+    text-align: center; /* Centered text */
+}
+
+/* Responsive styles for the hamburger menu */
+@media (max-width: 750px) {
+    .hamburger {
+        display: block; /* Show on smaller screens */
+    }
+    
+    .navbar .logo {
+        width: 70px;
+        height: 60px;
+    }
+    
+    .navbar-menu {
+        display: none; /* Hide regular menu on mobile */
+    }
+}
+
+/* Add a padding-top for content to avoid being hidden behind the navbar */
+.app {
+    padding-top: 100px; /* Adjust this based on the height of your navbar */
+}

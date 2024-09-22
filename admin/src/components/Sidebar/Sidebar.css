@@ -1,0 +1,101 @@
+/* Base Styles for Desktop */
+.sidebar {
+    width: 18%;
+    min-height: 100vh;
+    border: 1.5px solid white;
+    border-top: 0;
+    font-size: max(1vw, 20px);
+}
+
+.icons {
+    color: #ffffff;
+    font-size: 24px;
+    padding: 8px;
+    border-radius: 10%;
+    background-color: #fffdfd;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.icons:hover {
+    background-color: #d4e9e5;
+    color: #000;
+    transform: scale(1.1);
+}
+
+.sidebar-options {
+    padding-top: 50px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    border-right: 0;
+    border-radius: 3px 0 0 3px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-option:hover {
+    background-color: hsl(100, 100%, 43%);
+}
+
+/* Responsive Design */
+
+/* For tablets */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 25%;
+        font-size: 18px;
+    }
+
+    .icons {
+        font-size: 20px;
+        padding: 6px;
+    }
+
+    .sidebar-option {
+        padding: 8px 12px;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 100%; /* Full-width sidebar for mobile */
+        min-height: auto; /* Adjust height */
+        position: relative; /* Ensure proper alignment */
+        font-size: 16px; /* Smaller font size for readability */
+        display: flex; /* Stack items vertically */
+        flex-direction: column; /* Column layout for better stacking */
+        align-items: center; /* Center-align items */
+    }
+
+    .sidebar-options {
+        padding: 0;
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Consistent gap between items */
+        align-items: center; /* Center items for a cleaner look */
+    }
+
+    .sidebar-option {
+        flex-direction: row; /* Maintain row layout for icons and text */
+        gap: 6px;
+        padding: 6px 8px;
+        text-align: center; /* Center-align text */
+        border: none; /* Remove borders for cleaner look */
+        background-color: transparent;
+    }
+
+    .icons {
+        font-size: 18px; /* Smaller icons for mobile */
+        padding: 5px;
+    }
+}

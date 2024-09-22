@@ -1,0 +1,100 @@
+.qr-confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.qr-confirm h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.qr-confirm img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.qr-confirm button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.qr-confirm button:hover {
+    background-color: #0056b3;
+}
+
+.payment-proof-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.payment-proof-form input[type="text"],
+.payment-proof-form input[type="file"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.payment-proof-form input[type="file"] {
+    cursor: pointer;
+}
+
+.payment-proof-form h2 {
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.payment-proof-form button {
+    padding: 10px 25px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-proof-form button:hover {
+    background-color: #218838;
+}
+.qr-confirm {
+    text-align: center;
+}
+
+.payment-proof-form input[type="file"] {
+    margin-top: 10px;
+}
+
+.payment-proof-form img {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+}

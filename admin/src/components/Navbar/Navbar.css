@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4%; /* This padding ensures the hr and the navbar align */
+}
+
+.logo {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Keeps the aspect ratio */
+}
+
+.profile {
+  width: 40px; /* Adjust the size of the profile image */
+  height: 40px;
+  border-radius: 50%; /* Makes the profile image circular */
+}

@@ -1,0 +1,125 @@
+/* General styles */
+.list {
+    width: 95%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    color: chartreuse;
+}
+
+/* Title styling */
+.list-title {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Table styling */
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table header and item styles */
+.list-table-format {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 20px; 
+    padding: 20px;
+    margin: 10px 0; 
+    border: 1px solid #444;
+    background-color: #222;
+    border-radius: 10px; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for rows */
+.list-table-format:hover {
+    background-color: #333;
+    transform: scale(1.02); /* Slight scaling for effect */
+}
+
+/* Table header styling */
+.list-table-format b {
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+/* Image styling */
+.list-table-format img {
+    width: 100%;
+    max-width: 100px; 
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Action button styling */
+.list-table-format p:last-child {
+    color: red;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out, transform 0.2s;
+    font-weight: bold;
+}
+
+.list-table-format p:last-child:hover {
+    color: darkred;
+    transform: scale(1.1); /* Slight scaling on hover */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 800px) {
+    .list-table-format {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px; 
+    }
+
+    .list-table-format img {
+        max-width: 70px; 
+    }
+
+    .list-title {
+        font-size: 1.4em;
+    }
+
+    .list-table-format p {
+        font-size: 0.9em; 
+    }
+}
+
+@media (max-width: 600px) {
+    /* Hide specific table headers */
+    .list-table-format b {
+        display: none; /* Hide all headers */
+    }
+
+    .list-table-format {
+        grid-template-columns: 1fr; 
+        padding: 15px; 
+        margin: 15px 0; 
+    }
+
+    .list-table-format img {
+        max-width: 50px; 
+        margin: 0 auto; 
+    }
+
+    .list p {
+        font-size: 1.4em; /* Increase for better visibility */
+    }
+
+    .list-table-format p {
+        font-size: 1.1em; /* Adjust text size for readability */
+        text-align: center; 
+        margin: 5px 0; /* Added margin for better spacing */
+    }
+
+    .list-table-format p:last-child {
+        padding: 10px; 
+    }
+}

@@ -1,0 +1,122 @@
+.add {
+    width: 95%; /* Adjust for smaller screens */
+    max-width: 800px;
+    margin: 20px auto; /* Reduced margin for smaller devices */
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    color: chartreuse;
+    font-size: 16px;
+}
+
+.add form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Slightly reduced gap for compact view */
+}
+
+.add-img-upload img {
+    width: 100px; /* Scaled down for smaller devices */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.add-img-upload img:hover {
+    transform: scale(1.1);
+}
+
+.add-product-name, .add-prod-desc {
+    width: 100%; /* Ensures full width usage on smaller screens */
+    max-width: 500px;
+}
+
+.add-product-name input, .add-prod-desc textarea {
+    width: 100%;
+    padding: 12px; /* Larger padding for better touch experience */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    font-size: 14px; /* More readable text size on mobile */
+}
+
+.add-category-price {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduced gap for better fit on mobile */
+    cursor: pointer;
+}
+
+.add-category-price select, .add-category-price input {
+    width: 100%;
+    max-width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.add-btn button {
+    width: 100%; /* Full width for easier tapping */
+    max-width: 200px;
+    padding: 12px;
+    background-color: chartreuse;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.add-btn button:hover {
+    background-color: limegreen;
+}
+/* Toast container */
+.Toastify__toast-container {
+    font-size: 16px;
+  }
+  
+  /* Toast messages styling */
+  .Toastify__toast {
+    background-color: rgb(244, 253, 235) !important; /* Set background to chartreuse for visibility */
+    color: black !important; /* Make text black for contrast */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Success toast */
+  .Toastify__toast--success {
+    background-color: rgb(102, 202, 2) !important;
+    color: #1a1a1a;
+  }
+  
+  /* Error toast */
+  .Toastify__toast--error {
+    background-color: #ff4d4f !important; /* Bright red for error messages */
+    color: white !important;
+  }
+  
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 600px) {
+    .add {
+        padding: 15px; /* Adjusted padding for smaller devices */
+    }
+
+    .add-product-name input, .add-prod-desc textarea {
+        font-size: 13px; /* Smaller text for very small devices */
+        padding: 8px; /* Better padding for compact screens */
+    }
+
+    .add-category-price select, .add-category-price input {
+        max-width: 100px; /* More compact for mobile */
+    }
+
+    .add-btn button {
+        max-width: 100%; /* Full width for mobile */
+    }
+}

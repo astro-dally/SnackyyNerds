@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+hr {
+  border: none;
+  width: 100%;
+}
+
+.navbar-divider {
+  height: 2px;
+  background-color: #fff;
+  margin: 0;
+  width: calc(100% - 2%); /* Adjusts according to the navbar padding */
+}
+
+
+.app-content {
+  display: flex;
+}
+body, html {
+  overflow-x: hidden;
+}
+
+.app-content {
+  overflow-x: hidden;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

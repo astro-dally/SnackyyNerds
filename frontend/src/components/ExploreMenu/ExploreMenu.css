@@ -1,0 +1,101 @@
+.explore-menu-list-item img {
+  width: 150px; /* Set a fixed width */
+  height: 150px; /* Set a fixed height */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image fits within the circle without distortion */
+  margin: 10px; /* Optional: add some spacing around the images */
+  border: 2px solid #ddd; /* Optional: add a border for better visibility */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.explore-menu h1 {
+  color: rgb(7, 253, 15);
+  font-weight: 600;
+  padding-top: 50px;
+  text-align: center;
+  font-size: max(2vw, 36px);
+}
+
+.explore-menu-text {
+  max-width: 800px; /* Give more space for the text to fit better */
+  text-align: justify; /* Justify the text for a clean, aligned look */
+  margin: 20px auto; /* Center the text block and add vertical spacing */
+  font-size: 20px; /* Increase font size for readability */
+  line-height: 1.75; /* Increase line height to give the text room to breathe */
+  color: #444; /* Slightly lighter text color */
+  padding: 20px; /* Add some padding around the text */
+  border-radius: 8px; /* Optional: Rounded corners for the text container */
+  background-color: #f9f9f9; /* Optional: Light background for emphasis */
+  box-shadow: 0 2px 4px greenyellow; /* Optional: Subtle shadow for depth */
+}
+
+.explore-menu-list {
+  display: flex;
+  justify-content: flex-start; /* Start items from the left */
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+  overflow-x: auto; /* Allows smooth horizontal scrolling */
+  white-space: nowrap; /* Prevents flex items from wrapping */
+  padding: 10px; /* Optional: add padding around the scroll area */
+}
+
+.explore-menu-list-item {
+  min-width: 150px; /* Ensure each item takes enough space horizontally */
+  flex-shrink: 0; /* Prevent flex items from shrinking */
+  text-align: center; /* Centers text inside each item */
+  display: inline-block; /* Centers text inside each item */
+}
+
+.explore-menu-list::-webkit-scrollbar {
+  display: none; /* Optional: hides the scrollbar for a cleaner look */
+}
+
+.explore-menu-list-item p {
+  margin-top: 10px;
+  font-size: max(1.4vw, 16px);
+  cursor: pointer;
+}
+
+.explore-menu-hr {
+  /* width: 100%; */
+  /* height: 2px; */
+  background-color: #555; /* Light gray line */
+  /* border: none; */
+  /* margin-bottom: 40px; */
+}
+
+.explore-menu-list-item .active {
+  border: 4px solid rgb(7, 253, 15);
+  padding: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .explore-menu-list {
+      gap: 15px; /* Reduce gap on smaller screens */
+  }
+
+  .explore-menu-list-item {
+      min-width: 120px; /* Reduce min width */
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-menu-list {
+      gap: 10px; /* Further reduce gap */
+      flex-direction: column; /* Stack items vertically on very small screens */
+  }
+
+  .explore-menu-list-item {
+      min-width: 100%; /* Full width for items */
+  }
+}

@@ -1,0 +1,150 @@
+.snack-item-img-container {
+  width: 100%; /* Make the container responsive */
+  max-width: 300px; /* Limit maximum width */
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Center align for better appearance */
+}
+
+.snack-item-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 15px 15px 0px 0px;
+}
+
+.snack-item {
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px #407635;
+  transition: fadeIn 1s;
+  overflow: hidden; /* Ensure content doesn’t overflow */
+}
+
+.snack-item-info {
+  padding: 20px;
+}
+
+.snack-item-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.snack-item-desc {
+  color: #9b9a9a;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.snack-item-price {
+  color: rgb(7, 253, 15);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+
+.icon-visible {
+  color: rgb(222, 255, 7);
+  font-size: 24px;
+}
+
+.add {
+  cursor: pointer;
+  width: 50px;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  border-radius: 80%;
+  color: #9dff0b;
+  background-color: #000000;
+  font-size: 28px;
+}
+
+.snack-item-img p {
+  color: rgb(233, 6, 222);
+}
+
+.snack-item-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.snack-item-counter p {
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.snack-item-counter .remove,
+.snack-item-counter .add_button {
+  font-size: 28px; 
+  cursor: pointer;
+}
+
+.snack-item-counter .remove {
+  color: red;
+}
+
+.snack-item-counter .add_button {
+  color: green;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .snack-item {
+      margin: 15px; /* Adjust margin for smaller screens */
+  }
+
+  .snack-item-name {
+      font-size: 18px; /* Slightly reduce font size */
+  }
+
+  .snack-item-price {
+      font-size: 20px; /* Slightly reduce font size */
+  }
+
+  .snack-item-counter p {
+      font-size: 18px; /* Adjust font size for counter */
+  }
+
+  .snack-item-counter {
+      padding: 5px 10px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .snack-item {
+      margin: 10px; /* Further adjust margin */
+  }
+
+  .snack-item-name {
+      font-size: 16px; /* Further reduce font size */
+  }
+
+  .snack-item-price {
+      font-size: 18px; /* Further reduce font size */
+  }
+
+  .snack-item-counter {
+      gap: 8px; /* Reduce gap between items */
+  }
+
+  .snack-item-counter p {
+      font-size: 16px; /* Further adjust font size for counter */
+  }
+}

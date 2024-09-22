@@ -1,0 +1,52 @@
+.snack-display {
+    margin-top: 30px;
+}
+
+.snack-display h1 {
+    font-size: max(2vw, 36px); /* Responsive font size */
+    font-weight: 600;
+    color: rgb(7, 253, 15);
+    text-align: center; /* Center align for better visibility */
+}
+
+.snack-display-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Flexible grid layout */
+    margin-top: 30px;
+    gap: 30px; /* Space between items */
+    row-gap: 50px; /* Space between rows */
+}
+
+.snack-display-list-item {
+    background-color: #f9f9f9; /* Light background for items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding for better touch targets */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center text within items */
+    transition: transform 0.2s; /* Smooth transition for hover effects */
+}
+
+.snack-display-list-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .snack-display-list {
+        gap: 20px; /* Reduce gap on smaller screens */
+    }
+
+    .snack-display-list-item {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .snack-display-list {
+        gap: 15px; /* Further reduce gap */
+    }
+
+    .snack-display-list-item {
+        padding: 8px; /* Further adjust padding */
+    }
+}

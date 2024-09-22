@@ -1,0 +1,91 @@
+/* .header{
+    height: 600px;
+    width: 600px;
+    margin:10px auto;
+    border-radius: 10%;
+    background: url('/FrontImage3.png') no-repeat;
+    background-size:contain;
+    position: relative;
+    background-color: #f9f9f9; 
+    box-shadow: 0 6px 8px rgb(254, 255, 253); 
+} */
+.header {
+    height: 600px;
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 4%;
+    background: url(/FrontImage3.png) no-repeat;
+    background-size: cover;
+    /* background-size: contain; */
+    position: relative;
+    align-items: center;
+    background-color: #f9f9f9;
+    display: flex;
+    box-shadow: 0 6px 8px rgb(254, 255, 253);
+
+}
+.header-contents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 70%; 
+    animation: fadeIn 3s;
+    justify-content: center; 
+    align-self: end;
+    width: 50%;
+    justify-self: center;
+    background: hwb(71 1% 27% / 0.3);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    /* border-radius: 40px; */
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-bottom: 50px;
+}
+
+.header-contents h3 {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    font-size: 3vw;
+    margin-top: 0;
+}
+
+.header-contents button {
+    border: none;
+    color: rgb(3, 3, 3);
+    font-size: 20px;
+    font-weight: 800;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    border-radius: 50px; 
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* Optional: Light background for emphasis */
+    box-shadow: 0 2px 4px rgb(153, 92, 24); /* Optional: Subtle shadow for depth */
+}
+
+.header-contents button:hover {
+    background-color: rgba(5, 255, 22, 0.5);
+    color: aliceblue;
+}
+@media (max-width:1050px){
+    .header-contents{
+        max-width: 45%;
+    }
+
+}
+@media (max-width:750px){
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+}
