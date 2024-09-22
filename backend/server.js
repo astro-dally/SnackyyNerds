@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`server started on http://localhost:${port}`)
+    console.log(`server started on https://snackyynerdsbackend.onrender.com/${port}`)
 })
 
 //mongodb+srv://astro:astro#mongo64@cluster0.axovo.mongodb.net/?
