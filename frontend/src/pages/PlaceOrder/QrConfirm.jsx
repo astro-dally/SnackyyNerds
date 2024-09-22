@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Qrconfirm.css";
+import "../PlaceOrder/QrConfirm.css";
 import qrImage from "../../assets/PaymentQR.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
