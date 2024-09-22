@@ -2,23 +2,25 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/LOGO.jpeg";
-import { FiSearch } from "react-icons/fi";
+// import { FiSearch } from "react-icons/fi";
 import { IoCartOutline } from "react-icons/io5";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
 import { snack_list } from "../../assets/assets"; // Assuming snack data is imported
-import profile from "../../assets/icons/profile_icon.png";
-import bag from "../../assets/icons/bag_icon.png";
-import logoutt from "../../assets/icons/logout_icon.png";
+import { IoLogOut } from "react-icons/io5";
+import profile from "../../assets/icons/profile_iconn.webp";
+// import bag from "../../assets/icons/bag_icon.png";
+import { IoBagOutline } from "react-icons/io5";
+// import logoutt from "../../assets/icons/logout_icon.png";
 
 export const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
   const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  // const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  // const [searchResults, setSearchResults] = useState([]);
 
   const navigate = useNavigate();
 
@@ -95,7 +97,7 @@ export const Navbar = ({ setShowLogin }) => {
         </li>
       </ul>
       <div className="navbar-right">
-        {isSearchOpen ? (
+        {/* {isSearchOpen ? (
           <form className="search-bar" onSubmit={handleSearchSubmit}>
             <input
               type="text"
@@ -111,7 +113,7 @@ export const Navbar = ({ setShowLogin }) => {
           </form>
         ) : (
           <FiSearch className="searchicon" onClick={toggleSearchBar} />
-        )}
+        )} */}
         <div className="cart">
           <Link to="/cart">
             <IoCartOutline className="carticon" />
@@ -127,12 +129,12 @@ export const Navbar = ({ setShowLogin }) => {
             <img src={profile} alt="" />
             <ul className="nav-profile-dropdown">
               <li>
-                <img src={bag} alt="" />
+                <IoBagOutline className="bag" />
                 <p>Orders</p>
               </li>
               <hr />
               <li onClick={logout}>
-                <img src={logoutt} alt="" />
+                <IoLogOut className="log" />
                 <p>Logout</p>
               </li>
             </ul>
@@ -181,7 +183,7 @@ export const Navbar = ({ setShowLogin }) => {
         </ul>
       )}
 
-      {searchResults.length > 0 && (
+      {/* {searchResults.length > 0 && (
         <div className="search-results">
           <h3>Search Results:</h3>
           <ul>
@@ -194,7 +196,7 @@ export const Navbar = ({ setShowLogin }) => {
             ))}
           </ul>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

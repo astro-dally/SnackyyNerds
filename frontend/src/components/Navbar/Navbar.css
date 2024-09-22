@@ -201,7 +201,7 @@
 /* Profile Dropdown */
 /* Profile Dropdown */
 .navbar-profile {
-    position: relative;
+    position:inherit;
 }
 
 .navbar-profile img {
@@ -211,6 +211,7 @@
     cursor: pointer;
     border: 2px solid #00ff00;
     transition: border-color 0.3s ease, transform 0.3s ease;
+    margin-right: 12px;
 }
 
 .navbar-profile:hover img {
@@ -222,12 +223,12 @@
     display: none;
     position: absolute;
     right: 0;
-    background-color: #000; /* Solid black background */
+    background-color: #595a59; /* Solid black background */
     padding: 10px;
     border-radius: 12px; /* More rounded corners */
     width: 170px;
     text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5); /* Green glowing shadow */
+    box-shadow: 0 4px 10px rgba(46, 46, 46, 0.5); /* Green glowing shadow */
     transition: all 0.5s ease-in-out;
     transform: scale(0.9); /* Initially smaller */
 }
@@ -238,6 +239,7 @@
 }
 
 .nav-profile-dropdown li {
+    font-size: 20px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -266,7 +268,21 @@
     transform: rotate(-45deg); /* Fun tilt effect */
 }
 
-  
+.bag{
+    color: #090909;
+    background-color: rgb(65, 255, 8);
+    border:1px solid white;
+    border-radius: 50%;
+    font-size: 25px;
+    /* margin: 2px; */
+}
+.log{
+    color: #090909;
+    background-color: rgb(244, 28, 4);
+    border:1px solid white;
+    border-radius: 50%;
+    font-size: 25px;
+}
   
 
   
