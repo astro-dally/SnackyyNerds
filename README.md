@@ -1,8 +1,10 @@
 
 # <img src="https://github.com/user-attachments/assets/ba4aeb8d-73be-4670-8385-1217537a17a1" alt="LOGO!" width="150">
 
-**Welcome to Snacky Nerds!**  
-Your late-night snack companion for techies who live to code, game, and have fun with friends! 🚀
+## Welcome to Snacky Nerds!
+
+**Your late-night snack companion for techies who live to code, game, and have fun with friends! 🚀**
+
 
 ## What's Snacky Nerds? 😎
 
