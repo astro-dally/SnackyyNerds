@@ -128,11 +128,12 @@ export const Navbar = ({ setShowLogin }) => {
           <div className="navbar-profile">
             <img src={profile} alt="" />
             <ul className="nav-profile-dropdown">
-              <li>
+              {/* <li>
                 <IoBagOutline className="bag" />
                 <p>Orders</p>
               </li>
-              <hr />
+              <hr /> */}
+              {/* //Working on it */}
               <li onClick={logout}>
                 <IoLogOut className="log" />
                 <p>Logout</p>

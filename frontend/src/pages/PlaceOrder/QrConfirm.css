@@ -4,42 +4,56 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    background-color: #f4f4f4; /* Slightly lighter background for better contrast */
+    border-radius: 12px; /* Slightly more rounded corners for a softer look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* More depth in shadow */
+    max-width: 450px;
     margin: 50px auto;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-confirm:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
 }
 
 .qr-confirm h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 26px; /* Increased font size for more prominence */
+    margin-bottom: 18px; /* Reduced gap for tighter layout */
     color: #333;
+    font-weight: 600; /* Slightly bolder font weight */
 }
 
 .qr-confirm img {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    width: 300px; /* Slightly larger image */
+    height: 300px;
+    margin-bottom: 18px;
+    border: 2px solid #ddd; /* Thicker border for better visibility */
+    border-radius: 12px; /* Rounded corners for consistency */
+    transition: transform 0.3s ease; /* Image scaling on hover */
+}
+
+.qr-confirm img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
 }
 
 .qr-confirm button {
-    padding: 10px 20px;
+    padding: 12px 24px; /* Increased padding for better button size */
     font-size: 16px;
     color: #fff;
     background-color: #007bff;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px; /* Slightly more rounded corners */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Added subtle shadow */
 }
 
 .qr-confirm button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 .payment-proof-form {
@@ -49,52 +63,77 @@
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+    width: 100%;
+    max-width: 500px; /* Added max-width for responsive design */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.payment-proof-form h2 {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    font-weight: 500;
 }
 
 .payment-proof-form input[type="text"],
 .payment-proof-form input[type="file"] {
-    padding: 10px;
-    font-size: 14px;
+    padding: 12px;
+    font-size: 15px; /* Slightly larger font for accessibility */
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px; /* Increased max-width for better input size */
+    transition: border-color 0.3s ease;
+    color: rgb(255, 255, 255);
+}
+
+.payment-proof-form input[type="file"] {
+    padding: 12px;
+    font-size: 15px; /* Slightly larger font for accessibility */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 350px; /* Increased max-width for better input size */
+    transition: border-color 0.3s ease;
+    color: rgb(0, 0, 0);
+}
+
+.payment-proof-form input[type="text"]:focus,
+.payment-proof-form input[type="file"]:focus {
+    border-color: #007bff; /* Focus border for better accessibility */
+    outline: none;
+    /* color: black; */
 }
 
 .payment-proof-form input[type="file"] {
     cursor: pointer;
-}
-
-.payment-proof-form h2 {
-    font-size: 20px;
-    color: #444;
-    margin-bottom: 10px;
+    padding: 8px; /* Slightly reduced padding */
 }
 
 .payment-proof-form button {
-    padding: 10px 25px;
-    font-size: 16px;
+    padding: 12px 28px;
+    font-size: 17px; /* Slightly increased font size for readability */
     color: #fff;
     background-color: #28a745;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2); /* Added shadow for buttons */
 }
 
 .payment-proof-form button:hover {
     background-color: #218838;
-}
-.qr-confirm {
-    text-align: center;
-}
-
-.payment-proof-form input[type="file"] {
-    margin-top: 10px;
+    transform: translateY(-2px); /* Lift effect on hover */
 }
 
 .payment-proof-form img {
     border: 1px solid #ccc;
     border-radius: 8px;
     margin-top: 10px;
+    max-width: 100%; /* Make sure image is responsive */
+    height: auto;
 }
