@@ -4,8 +4,6 @@ import qrImage from "../../assets/PaymentQR.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const QRConfirm = () => {
   const { token, url } = React.useContext(StoreContext);
@@ -126,7 +124,7 @@ const QRConfirm = () => {
       )}
 
       {/* Toaster container */}
-      <ToastContainer
+      {/* <ToastContainer
         position="top-right" // Set the position to 'top-right'
         autoClose={5000} // Auto close after 5 seconds
         hideProgressBar={false} // Show the progress bar
@@ -135,7 +133,7 @@ const QRConfirm = () => {
         pauseOnHover // Pause toast when hovered
         draggable // Allow dragging the toast
         theme="colored" // Set theme to 'colored'
-      />
+      /> */}
     </div>
   );
 };

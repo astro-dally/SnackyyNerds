@@ -13,6 +13,8 @@ import profile from "../../assets/icons/profile_iconn.webp";
 // import bag from "../../assets/icons/bag_icon.png";
 import { IoBagOutline } from "react-icons/io5";
 // import logoutt from "../../assets/icons/logout_icon.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");

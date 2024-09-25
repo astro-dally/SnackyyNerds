@@ -113,7 +113,7 @@ const PlaceOrder = () => {
             <input
               name="zip"
               onChange={onChangeHandler}
-              type="text"
+              type="number"
               placeholder="Zip code"
               value={data.zip}
             />
@@ -130,7 +130,7 @@ const PlaceOrder = () => {
             required
             name="phone"
             onChange={onChangeHandler}
-            type="text"
+            type="number"
             placeholder="Phone number"
             value={data.phone}
           />
