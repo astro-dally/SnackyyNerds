@@ -4,7 +4,8 @@ import qrImage from "../../assets/PaymentQR.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { StoreContext } from "../../context/StoreContext";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const QRConfirm = () => {
   const { token, url } = React.useContext(StoreContext);
   const navigate = useNavigate();
@@ -96,7 +97,7 @@ const QRConfirm = () => {
             required
           />
           <input
-            type="text"
+            type="number"
             name="contact"
             placeholder="Contact Number"
             value={formData.contact}
