@@ -29,9 +29,7 @@ const SnackDisplay = ({ category }) => {
   return (
     <div className="snack-display" id="techies-favorites">
       <h1>Techies Favourite Snacks</h1>
-      <Link to="#techies-favorites" className="favorites-link">
-        See Techies' Favourites
-      </Link>
+      <Link to="#techies-favorites" className="favorites-link"></Link>
       <div className="snack-display-list">
         {snack_list.map((item, index) =>
           category === "All" || category === item.category ? (
