@@ -400,3 +400,30 @@
         font-size: 10px;
     }
 }
+.login-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+    display: none; /* Initially hidden */
+  }
+  
+  /* Ensure when the popup is active, it is displayed */
+  .login-popup.active {
+    display: block;
+  }
+  
+  .login-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  

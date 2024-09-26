@@ -1,15 +1,40 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../context/StoreContext";
 import { useNavigate } from "react-router-dom";
+import LoginPopup from "../../components/LoginPopup/LoginPopup.jsx"; // Import your LoginPopup component
 
 const Cart = () => {
-  const { cartItems, snack_list, removeFromCart, getTotalCartAmount, url } =
-    useContext(StoreContext);
+  const {
+    cartItems,
+    snack_list,
+    removeFromCart,
+    getTotalCartAmount,
+    url,
+    token,
+  } = useContext(StoreContext);
+  const [showLogin, setShowLogin] = useState(false);
   const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    if (!token) {
+      setShowLogin(true); // Show login popup if not signed in
+    } else {
+      navigate("/order"); // Proceed to checkout if signed in
+    }
+  };
 
   return (
     <div className="cartt">
+      {showLogin && (
+        <div className="login-popup active">
+          <LoginPopup
+            className="login-popup-close"
+            setShowLogin={setShowLogin}
+          />
+        </div>
+      )}{" "}
+      {/* Show login popup */}
       <div className="cart-items">
         <div className="cart-items-title">
           <p>Items</p>
@@ -59,10 +84,9 @@ const Cart = () => {
               </p>
             </div>
           </div>
-          <button onClick={() => navigate("/order")}>
-            PROCEED TO CHECKOUT
-          </button>
+          <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
         </div>
+
         <div className="cart-promocode">
           <div>
             <p>If you have a promo code, Enter it here</p>
