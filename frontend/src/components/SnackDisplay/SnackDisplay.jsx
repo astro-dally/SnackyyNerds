@@ -12,7 +12,7 @@ const SnackDisplay = ({ category }) => {
   useEffect(() => {
     const loadSnacks = setTimeout(() => {
       setLoading(false);
-    }, 9000); // simulates loading time
+    }, 18000); // simulates loading time
 
     return () => clearTimeout(loadSnacks);
   }, []);
