@@ -7,9 +7,11 @@
     gap: 20px;
     padding: 20px;
     background-color: #2c2c2c;
+    margin-top: 50px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     color: #ffffff;
+    position: relative;
   }
   
   .place-order-left, .place-order-right {
@@ -19,6 +21,7 @@
   .title {
     font-size: 24px;
     font-weight: bold;
+    /* margin-top: 19px; */
     margin-bottom: 20px;
     color: #ffffff;
   }
